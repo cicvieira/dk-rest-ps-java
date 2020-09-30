@@ -98,7 +98,7 @@ Ele pode ser inserido usando o link: **http://localhost:4200/**
 ```
 ## File Storage Properties
 # All files uploaded through the REST API will be stored in this directory
-file.upload-dir=classpath:/db/file
+file.upload-dir = C:/Users/user/projetos/dk-rest-ps-java/file
 ```
 
 
