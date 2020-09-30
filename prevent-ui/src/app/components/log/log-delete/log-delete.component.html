@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title>Excluir Log</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Data"
+                   [(ngModel)]="datetime" name="data" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="IP"
+                   [(ngModel)]="log.ip" name="ip" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Request"
+                   [(ngModel)]="log.request" name="request" disabled>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Status"
+                 [(ngModel)]="log.status" name="status" disabled>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="User Agent"
+                 [(ngModel)]="log.useragent" name="useragent" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteLog()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

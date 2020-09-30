@@ -1,0 +1,60 @@
+{
+  "logs": [
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"swcd (unknown version) CFNetwork/808.2.16 Darwin/15.6.0\"",
+      "id": 5,
+      "ip": "192.0.0.1"
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"swcd (unknown version) CFNetwork/808.2.16 Darwin/15.6.0\"",
+      "id": 11
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393\"",
+      "id": 12
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"swcd (unknown version) CFNetwork/808.2.16 Darwin/15.6.0\"",
+      "id": 13
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"swcd (unknown version) CFNetwork/808.2.16 Darwin/15.6.0\"",
+      "id": 14
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "200",
+      "userAgent": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393\"",
+      "id": 15
+    },
+    {
+      "data": "2020-09-11T00:00:00.000Z",
+      "ip": "192.0.0.1",
+      "request": "\"GET / HTTP/1.1\"",
+      "status": "300",
+      "userAgent": "\"swcd (unknown version) CFNetwork/808.2.16 Darwin/15.6.0\"",
+      "id": 16
+    }
+  ]
+}

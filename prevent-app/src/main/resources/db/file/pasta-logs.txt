@@ -1,0 +1,1 @@
+* Defina o caminho onde será salvo os arquivos de log no application.properties

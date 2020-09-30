@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Alterar Log</mat-card-title>
+    <form>
+        <mat-form-field style="width:200px;">
+          <input matInput [ngxMatDatetimePicker]="picker1" placeholder="Data" required [(ngModel)]="datetime" name="data">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <ngx-mat-datetime-picker #picker1 [showSeconds]="true"></ngx-mat-datetime-picker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="IP" maxlength="15" required [(ngModel)]="log.ip" name="ip">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Request" required [(ngModel)]="log.request" name="request">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Status" maxlength="3" required [(ngModel)]="log.status" name="status">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="User Agent" required [(ngModel)]="log.useragent" name="useragent">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateLog()" color="primary">
+        Atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

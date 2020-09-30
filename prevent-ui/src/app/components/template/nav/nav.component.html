@@ -1,0 +1,27 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="false" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                  dashboard
+                </i>
+                Dashboard
+            </a>
+            <a mat-list-item  routerLink="/logs">
+                <i class="material-icons">
+                  list
+                </i>
+                Logs
+            </a>
+            <a mat-list-item  routerLink="/uploadlogs">
+              <i class="material-icons">
+                cloud_upload
+              </i>
+              Upload Logs
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

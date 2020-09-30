@@ -1,0 +1,52 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3'
+
+#Define services
+services:
+
+  #PostgreSQL Database for the application
+  prevent-postgres:
+    image: postgres:9.6-alpine
+    container_name: prevent-postgres
+    #Volume mounted for database for the storage
+    volumes:
+      - prevent-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 
+      # Forward the exposed port 5432 on the container to port 5432 on the host machine
+
+    #Environment variable for DB name, user and password
+    environment:
+      - POSTGRES_DB=prevent
+      - POSTGRES_USER=prevent
+      - POSTGRES_PASSWORD=prevent
+
+  #Back-end Spring Boot Application
+  prevent-app:
+    #The docker file in prevent-app build the jar and provides the docker image with the following name.
+    build: ./prevent-app
+    container_name: prevent-app
+
+    #Environment variables for Spring Boot Application.
+    environment:
+      - DB_SERVER=prevent-postgres
+      - POSTGRES_DB=prevent
+      - POSTGRES_USER=prevent
+      - POSTGRES_PASSWORD=prevent
+    ports:
+      - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    links:
+      - prevent-postgres
+
+  #Fron-end Angular Application
+  prevent-ui:
+    build: ./prevent-ui
+    container_name: prevent-ui
+    ports:
+      - 4200:80
+    links:
+      - prevent-app
+
+#Volumes for DB data
+volumes:
+  prevent-data:
